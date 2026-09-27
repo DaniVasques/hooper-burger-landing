@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow: hidden;
+    background: #000 url(../img/background.webp) center/cover no-repeat;
+    font-family: "Sora", sans-serif;
+}
+
+h1,
+h2,
+h3,
+a {
+    text-transform: uppercase;
+    font-family: "Teko", sans-serif;
+    line-height: 100%;
+}
+
+img {
+    display: block;
+}
+
+span {
+    display: inline-block;
+}
+
+/* ==========================================
+   STAGE
+========================================== */
+
+.stage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.screen {
+    position: absolute;
+    height: 100%;
+}
+
+/* ==========================================
+   INTRO
+========================================== */
+
+.screen-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+
+    .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        h1 {
+            font-size: 80px;
+            color: #FFBB00;
+            text-align: center;
+        }
+
+        .btn-intro {
+            background: #FFE498;
+        }
+    }
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.screen-hero {
+    display: flex;
+    align-items: center;
+
+    .container {
+        width: min(1200px, calc(100% - 30px));
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+
+    }
+
+    .hero-content {
+        h2 {
+            font-size: 270px;
+            line-height: .8;
+            margin-left: -10px;
+            color: #FFBB00;
+        }
+
+        h3 {
+            font-size: 48px;
+            line-height: .8;
+            color: #FFE498;
+        }
+
+        p {
+            max-width: 60%;
+            margin: 24px 0;
+            font-size: 20px;
+            color: #FFF;
+            line-height: 130%;
+        }
+
+        
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        transform: rotate(10deg);
+       
+
+        .smoke {
+            position: absolute;
+            top: -35%;
+            left: 10%;
+            pointer-events: none;
+            filter: blur(2px);
+            opacity: 0;
+        }
+    }
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 48px;
+
+    border-radius: 4px;
+
+    background: #FFE498;
+    color: #000;
+
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #FFBB00;
+}
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width:1200px) {
+
+    .screen-intro {
+
+        .intro-content {
+
+            h1 {
+                font-size: 48px;
+            }
+
+        }
+
+    }
+
+    .screen-hero {
+
+        .container {
+            flex-direction: column-reverse;
+            justify-content: center;
+            text-align: center;
+            gap: 48px;
+        }
+
+        .hero-content {
+
+            h2 {
+                font-size: 96px;
+                margin-left: 0;
+            }
+
+            h3 {
+                font-size: 36px;
+            }
+
+            p {
+                max-width: 100%;
+                font-size: 16px;
+            }
+
+        }
+
+        .hero-image {
+            position: relative;
+            max-width: 280px;
+
+            img{
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}

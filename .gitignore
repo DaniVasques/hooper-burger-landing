@@ -1,0 +1,48 @@
+# Dependencias
+node_modules/
+
+# Builds e cobertura
+dist/
+build/
+coverage/
+.cache/
+.parcel-cache/
+
+# Temporarios e logs
+tmp/
+temp/
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+
+# Configuracoes locais de editores e sistema
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Variaveis de ambiente e configuracoes locais
+.env
+.env.*
+*.local
+.npmrc
+.netrc
+
+# Credenciais e chaves privadas
+secrets/
+credentials/
+secrets.*
+credentials.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+id_ed25519*
